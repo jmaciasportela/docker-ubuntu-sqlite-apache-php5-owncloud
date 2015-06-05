@@ -13,7 +13,7 @@ RUN rm -fr /etc/service/sshd/down
 
 # Update root password
 # CHANGE IT # to something like root:ASdSAdfÑ3
-RUN echo "root:root" | chpasswdd
+RUN echo "root:root" | chpasswd
 
 # Enable ssh for root
 RUN sed -i 's/#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
